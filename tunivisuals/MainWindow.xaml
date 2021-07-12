@@ -1,0 +1,43 @@
+﻿<Window x:Class="tunivisuals.MainWindow"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tunivisuals"
+        mc:Ignorable="d"
+        Background="#584053"
+        Title="Tunivisuals" Height="450" Width="500">
+
+    <Border Background="#8dc6bf" Margin="30" CornerRadius="20">
+        <Border Padding="10">
+
+            
+            <StackPanel>
+
+                <TextBlock Text="Connect to Tunivisuals" Foreground="White" FontFamily="helvetica"  FontSize="30" Margin="0 0 0 20"/>
+                <Separator Margin="0 0 0 20"></Separator>
+                <!--login-->
+                <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="10,10,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
+                <TextBlock Text="Email" FontFamily="helvetica" FontWeight="Light" FontSize="19"/>
+                <TextBox x:Name="emailText" Padding="2"/>
+                <TextBlock Text="Password" FontFamily="helvetica" FontWeight="Light" FontSize="19"/>
+                <PasswordBox x:Name="passwordText" Padding="2"/>
+                
+                <!--buttons-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="loginButton" Background="DarkOrange" Click="loginButton_Click" Margin="0 10 5 0" Grid.Column="0" Content="Log in"/>
+                    <Button x:Name="closeButton" Click="close_Click" Margin="5 10 0 0" Grid.Column="1" Content="Close"/>
+                </Grid>
+
+            </StackPanel>
+            
+        </Border>
+        
+    </Border>
+    
+</Window>

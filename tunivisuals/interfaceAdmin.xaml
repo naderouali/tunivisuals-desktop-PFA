@@ -1,0 +1,49 @@
+﻿<Window x:Class="tunivisuals.interfaceAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tunivisuals"
+        mc:Ignorable="d"
+        Title="Interface admin" Height="450" Width="500">
+    <Grid>
+        <StackPanel Margin="0,0,10,0">
+            <Grid>
+                <TextBlock x:Name="welcome" Text="Welcome :" FontFamily="helvetica" FontSize="35" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontStretch="ExtraCondensed"/>
+                <TextBlock x:Name="ccAdmin" FontFamily="helvetica" FontSize="35" Margin="190,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontStretch="ExtraCondensed"/>
+            </Grid>
+            <Separator Margin="0 10 0 20" Foreground="Black"></Separator>
+
+            <!--PLAFOND BUTTONS-->
+            <Grid Margin="0 0 0 40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="readButton" Click="read_Click" Margin="30 0 15 20" Padding="10" Content="Photographers management" Grid.Column="0"/>
+                <Button x:Name="logoutButton" Click="logout_Click" Margin="15 0 30 20" Padding="10" Content="Log out" Grid.Column="1" Background="#e5bf24"/>
+            </Grid>
+            
+            <!-- CODE -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Your code" FontFamily="helvetica" FontWeight="Light" FontSize="15" Margin="40 0 0 0"/>
+                <TextBox Grid.Column="1" x:Name="codeText" Padding="2" Margin="0 0 40 0" IsReadOnly="True"/>
+            </Grid>
+            <!-- NAME -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Your name" FontFamily="helvetica" FontWeight="Light" FontSize="15" Margin="40 30 0 0"/>
+                <TextBox Grid.Column="1" x:Name="nameText" Padding="2" Margin="0 30 40 0" IsReadOnly="True"/>
+            </Grid>
+
+            
+        </StackPanel>
+    </Grid>
+</Window>
